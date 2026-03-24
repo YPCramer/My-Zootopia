@@ -11,14 +11,17 @@ output = ""
 for animal in animals_data:
     output += '<li class="cards__item">\n'
     if "name" in animal:
-        output += f"Name: {animal['name']}<br/>\n"
+        output += f'<div class="card__title">{animal["name"]}</div>\n'
+    output += '  <p class="card__text">\n'
     if "diet" in animal["characteristics"]:
-        output += f"Diet: {animal["characteristics"]["diet"]}<br/>\n"
+        output += f'<strong>Diet:</strong>{animal["characteristics"]["diet"]}<br/>\n'
     if "locations" in animal:
-        output += f"Location: {animal["locations"][0]}<br/>\n"
+        output += f'<strong>Location:</strong>{animal["locations"][0]}<br/>\n'
     if "type" in animal["characteristics"]:
-        output += f"Type: {animal["characteristics"]["type"]}<br/>\n"
+        output += f'<strong>Type:</strong>{animal["characteristics"]["type"]}<br/>\n'
+    output += '  </p>\n'
     output += "</li>\n"
+
 
 # Step 1
 with open ("animals_template.html", "r") as fileobj:
