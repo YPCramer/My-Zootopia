@@ -29,6 +29,8 @@ def serialize_animal(animal_obj):
         output += f'        <li><strong>Type:</strong> {animal_obj["characteristics"]["type"]}</li>\n'
     if "group" in animal_obj["characteristics"]:
         output += f'        <li><strong>Group:</strong> {animal_obj["characteristics"]["group"]}</li>\n'
+    if "skin_type" in animal_obj["characteristics"]:
+        output += f'        <li><strong>Skin Type:</strong> {animal_obj["characteristics"]["skin_type"]}</li>\n'
     output += '    </ul>\n'
     output += '  </p>\n'
     output += '</li>\n'
